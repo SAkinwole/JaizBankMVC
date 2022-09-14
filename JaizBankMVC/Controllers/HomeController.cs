@@ -12,25 +12,7 @@ namespace JaizBankMVC.Controllers
         {
             _logger = logger;
 
-            Transaction transaction = new Transaction()
-            {
-                TransactionID = 1,
-                MerchantName = "Lizpee Global Resources",
-                Location = "",
-                TerminalID = 1,
-                STAN = 003862,
-                DateTime = DateTime.Now,
-                Amount = "NGN0.01",
-                DebitCardNo = "539941*******3399",
-                ExpiryDate = "11/24",
-                AuthorizationCode = 00000,
-                Offline = "CVM",
-                ResponseCode = 91,
-                AID = "A0000000000000041010",
-                RRN = "000210002450",
-                Accelerex = "2.00-090921-LINT",
-                PTAD = "Global Accelerex"
-            };
+            
         }
 
         public IActionResult Index()
