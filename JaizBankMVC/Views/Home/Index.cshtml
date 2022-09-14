@@ -1,8 +1,55 @@
-﻿@{
+﻿@model JaizBankMVC.Models.Transaction
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div id="container">
+    <div id="header">
+        <img id="img" src=~/jaiz.png alt="logo" />
+        <h2> **** MERCHANT COPY ****</h2>
+        <p> MERCHANT NAME: </p>
+        <p>@Model.MerchantName </p>
+        <p> LOCATION: </p>
+        <p>@Model.Location</p>
+        <p> TERMINAL: @Model.TerminalID </p>
+        <p><span> ------------------------------------------------</span></p>
+    </div>
+
+    <div id="purchase">
+        <h2>PURCHASE</h2>
+        <p>STAN: @Model.STAN</p>
+        <p>DATE/TIME: @Model.DateTime</p>
+
+        <p><span> ------------------------------------------------</span></p>
+
+        <p>AMOUNT: @Model.Amount</p>
+
+        <p><span> ------------------------------------------------</span></p>
+    </div>
+
+    <div id="Card">
+        <p>Debit MasterCard</p>
+        <p id="carddetails"> @Model.DebitCardNo</p>
+
+        <p>369/GLOBAL ACCELEREX</p>
+        <p>EXPIRY DATE: @Model.ExpiryDate</p>
+        <p>AUTHORIZATION CODE:  @Model.AuthorizationCode</p>
+        <p>OFFLINE CVM</p>
+
+    </div>
+
+    <div id="Transaction">
+        <h3>TRANSACTION DECLINED</h3>
+        <p>RESPONSE CODE: @Model.ResponseCode</p>
+        <p>Issuer or switch inorperative</p>
+        <p>AID : @Model.AID</p>
+        <p>RRN: @Model.RRN</p>
+        <p> @Model.Accelerex</p>
+        <p>PTAD: @Model.PTAD</p>
+    </div>
+
+    <p align="center">Thank you for using Jaiz Bank POS</p>
+
 </div>

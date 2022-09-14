@@ -5,6 +5,7 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+    font-family: 'Times New Roman';
   }
 }
 
@@ -15,4 +16,12 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+h2 h3{
+    justify-content: center;
+}
+
+#carddetails{
+    justify-content: center;
 }
